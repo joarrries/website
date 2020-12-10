@@ -1,0 +1,15 @@
+account_id = "54b409d0150b6ab13c0e0a49ebbfc801"
+route = ""
+type = "webpack"
+zone_id = "6731d7a20a267bcfdd403b0dbdd3274c"
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
+
+[env.prod]
+name = "hellocf"
+
+[env.test]
+name = "hellotest"
+workers_dev = true

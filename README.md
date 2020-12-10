@@ -20,5 +20,12 @@ yarn build
 yarn lint
 ```
 
+## Deploy
+```
+wrangler publish --env test
+
+wrangler publish --env prod
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
