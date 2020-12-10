@@ -3,7 +3,9 @@ import VueI18n from 'vue-i18n'
 
 Vue.use(VueI18n)
 
-const locale = 'EN' // default locale
+
+
+const locale = localStorage.getItem('lang') || 'EN'; // default locale
 
 export default new VueI18n({
     locale,
@@ -43,7 +45,7 @@ export default new VueI18n({
                     price1: 'monthly',
                 },
                 zen: {
-                    title: 'XYM',
+                    title: 'ZEN',
                     content: 'Just deposit 42 or 500 ZEN to run the master node immediately.',
                     price0: 'Undetermined',
                     price1: 'monthly',
@@ -109,7 +111,7 @@ export default new VueI18n({
                     price1: '月',
                 },
                 zen: {
-                    title: 'XYM',
+                    title: 'ZEN',
                     content: '只需抵押42或者500ZEN即刻运行主节点',
                     price0: '待定',
                     price1: '月',
