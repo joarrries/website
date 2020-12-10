@@ -24,14 +24,28 @@
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item" href="#home">Home</a>
-              <a class="navbar-item" href="#working">Staking</a>
-              <a class="navbar-item" href="#features">Features</a>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">EN</a>
-                <div class="navbar-dropdown">
-                  <a class="navbar-item navbar-item-dropdown" href="#">EN</a>
-                  <!-- <a class="navbar-item navbar-item-dropdown" href="#">ZH</a> -->
+              <a class="navbar-item" href="#home">
+                {{ $t("nav.home") }}
+              </a>
+              <a class="navbar-item" href="#working">
+                {{ $t("nav.staking") }}
+              </a>
+              <a class="navbar-item" href="#features">
+                {{ $t("nav.features") }}
+              </a>
+              <div class="navbar-item">
+                <div class="control">
+                  <div class="select">
+                    <select v-model="$i18n.locale">
+                      <option
+                        v-for="(lang, i) in langs"
+                        :key="`Lang${i}`"
+                        :value="lang"
+                      >
+                        {{ lang }}
+                      </option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
@@ -42,13 +56,13 @@
       <div class="container py-4">
         <div class="columns is-vcentered">
           <div class="column">
-            <h2 class="title is-spaced">Easy to run the node</h2>
+            <h2 class="title is-spaced">{{ $t("slogan.title") }}</h2>
             <p class="subtitle">
-              Easynodes is a staking service provider that focuses on PoS. We
-              will Provide you with convenient, safe and stable enterprise-level
-              services.
+              {{ $t("slogan.subtitle") }}
             </p>
-            <a class="button is-primary" href="#">Start Staking</a>
+            <a class="button is-primary" href="#working">{{
+              $t("slogan.btn")
+            }}</a>
           </div>
           <div class="column"><img src="img/1.png" alt="" /></div>
         </div>
@@ -57,56 +71,55 @@
 
       <div class="container has-text-centered py-4">
         <a class="hidden-item" name="working"></a>
-        <h2 class="title mb-6">Running</h2>
+        <h2 class="title mb-6">{{ $t("staking.runningTitle") }}</h2>
         <div class="columns">
-          <div class="column">
+          <div class="column flex-col">
             <div class="card">
               <div class="card-content">
-                <h3 class="title is-4">ETH2.0</h3>
+                <h3 class="title is-4">{{ $t("staking.eth2.title") }}</h3>
                 <p class="block">
-                  We support the operation of escrow, the private key of the
-                  asset is controlled by yourself, which is more secure.
+                  {{ $t("staking.eth2.content") }}
                 </p>
                 <h4 class="title is-spaced is-5">
-                  $20 <small> / monthly</small>
+                  {{ $t("staking.eth2.price0") }}
+                  <small> / {{ $t("staking.eth2.price1") }}</small>
                 </h4>
                 <button class="button is-primary" type="button">
-                  Join Now
+                  {{ $t("staking.runningBtn") }}
                 </button>
               </div>
             </div>
           </div>
-          <div class="column">
+          <div class="column flex-col">
             <div class="card">
               <div class="card-content">
-                <h3 class="title is-4">PRV</h3>
+                <h3 class="title is-4">{{ $t("staking.prv.title") }}</h3>
                 <p class="block">
-                  Conveniently run PRV virtual nodes and obtain stable income.
-                  The estimated annualized income is 20%.
+                  {{ $t("staking.prv.content") }}
                 </p>
                 <h4 class="title is-spaced is-5">
-                  $9 <small> / monthly</small>
+                  {{ $t("staking.prv.price0") }}
+                  <small> / {{ $t("staking.prv.price1") }}</small>
                 </h4>
                 <button class="button is-primary" type="button">
-                  Join Now
+                  {{ $t("staking.runningBtn") }}
                 </button>
               </div>
             </div>
           </div>
-          <div class="column">
+          <div class="column flex-col">
             <div class="card">
               <div class="card-content">
-                <h3 class="title is-4">XYM</h3>
+                <h3 class="title is-4">{{ $t("staking.xym.title") }}</h3>
                 <p class="block">
-                  Symbol will be launched in January next year. We support
-                  running Symbol super nodes in a managed way, make an
-                  appointment immediately.
+                  {{ $t("staking.xym.content") }}
                 </p>
                 <h4 class="title is-spaced is-5">
-                  $50 <small> / monthly</small>
+                  {{ $t("staking.xym.price0") }}
+                  <small> / {{ $t("staking.xym.price1") }}</small>
                 </h4>
                 <button class="button is-primary" type="button">
-                  Join Now
+                  {{ $t("staking.runningBtn") }}
                 </button>
               </div>
             </div>
@@ -115,21 +128,22 @@
       </div>
 
       <div class="container has-text-centered py-4 pt-6">
-        <a class="hidden-item" href="#" name="waiting"></a>
-        <h2 class="title mb-6">Coming soon</h2>
+        <a class="hidden-item" href="#"></a>
+        <h2 class="title mb-6">{{ $t("staking.comingTitle") }}</h2>
         <div class="columns">
-          <div class="column is-one-quarter">
+          <div class="column is-one-third flex-col">
             <div class="card">
               <div class="card-content">
-                <h3 class="title is-4">ZEN</h3>
+                <h3 class="title is-4">{{ $t("staking.zen.title") }}</h3>
                 <p class="block">
-                  Just deposit 42 or 500 ZEN to run the master node immediately.
+                  {{ $t("staking.zen.content") }}
                 </p>
                 <h4 class="title is-spaced is-5">
-                  Undetermine <small> / monthly</small>
+                  {{ $t("staking.zen.price0") }}
+                  <small> / {{ $t("staking.zen.price1") }}</small>
                 </h4>
                 <button class="button is-primary is-outlined" type="button">
-                  Waiting For
+                  {{ $t("staking.comingBtn") }}
                 </button>
               </div>
             </div>
@@ -139,7 +153,7 @@
 
       <div class="container has-text-centered py-4 pt-6">
         <a class="hidden-item" href="#" name="features"></a>
-        <h2 class="title mb-6">Features of Easynodes</h2>
+        <h2 class="title mb-6">{{ $t("features.title") }}</h2>
         <div class="columns">
           <div class="column flex-col">
             <div class="card">
@@ -151,11 +165,12 @@
                     </figure>
                   </div>
                 </div>
-                <h5 class="title is-5">Safety</h5>
+                <h5 class="title is-5">
+                  {{ $t("features.safety.title") }}
+                </h5>
                 <div class="level">
                   <p class="block pt-1 pl-1 lr-1">
-                    Decentralization, your virtual assets are in your own
-                    wallet.
+                    {{ $t("features.safety.content") }}
                   </p>
                 </div>
               </div>
@@ -171,10 +186,12 @@
                     </figure>
                   </div>
                 </div>
-                <h5 class="title is-5">Convenient</h5>
+                <h5 class="title is-5">
+                  {{ $t("features.convenient.title") }}
+                </h5>
                 <div class="level">
                   <p class="block pt-1 pl-1 lr-1">
-                    Simplified operation, fewer steps. Start now.
+                    {{ $t("features.convenient.content") }}
                   </p>
                 </div>
               </div>
@@ -190,11 +207,12 @@
                     </figure>
                   </div>
                 </div>
-                <h5 class="title is-5">Profession</h5>
+                <h5 class="title is-5">
+                  {{ $t("features.profession.title") }}
+                </h5>
                 <div class="level">
                   <p class="block pt-1 pl-1 lr-1">
-                    More than ten years of developer's experience to support
-                    you.
+                    {{ $t("features.profession.content") }}
                   </p>
                 </div>
               </div>
@@ -210,11 +228,12 @@
                     </figure>
                   </div>
                 </div>
-                <h5 class="title is-5">Preferential</h5>
+                <h5 class="title is-5">
+                  {{ $t("features.preferential.title") }}
+                </h5>
                 <div class="level">
                   <p class="block pt-1 pl-1 lr-1">
-                    Preferential prices, super cost-effective, bring maximum
-                    benefits.
+                    {{ $t("features.preferential.content") }}
                   </p>
                 </div>
               </div>
@@ -232,9 +251,9 @@
             </div>
           </div>
           <div class="level-right">
-            <a class="level-item" href="#">Support</a>
-            <a class="level-item" href="#">Staking</a>
-            <a class="level-item" href="#">Privacy</a>
+            <a class="level-item" href="#">{{ $t("footer.support") }}</a>
+            <a class="level-item" href="#">{{ $t("footer.staking") }}</a>
+            <a class="level-item" href="#">{{ $t("footer.privacy") }}</a>
           </div>
         </div>
         <hr />
@@ -265,6 +284,9 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return { langs: ["EN", "ZH"] };
+  },
 };
 </script>
 

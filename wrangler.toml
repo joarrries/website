@@ -1,6 +1,7 @@
 account_id = "54b409d0150b6ab13c0e0a49ebbfc801"
 route = ""
 type = "webpack"
+workers_dev = true
 zone_id = "6731d7a20a267bcfdd403b0dbdd3274c"
 
 [site]
@@ -12,4 +13,3 @@ name = "hellocf"
 
 [env.test]
 name = "hellotest"
-workers_dev = true
