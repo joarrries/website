@@ -65,7 +65,7 @@
             <a class="level-item" href="/#working">
               {{ $t("footer.staking") }}
             </a>
-            <a class="level-item" :href="privacyLink">{{
+            <a class="level-item" :href="$t('footer.privacyLink')">{{
               $t("footer.privacy")
             }}</a>
             <a class="level-item" href="mailto:support@easynodes.net">{{
@@ -105,15 +105,6 @@ export default {
   components: { LocaleSelector },
   data() {
     return { langs: ["EN", "ZH"], isActive: false };
-  },
-  computed: {
-    privacyLink: function () {
-      if (this.$i18n.locale === "ZH") {
-        return "https://docs.easynodes.net/zh/privacy-policy";
-      } else {
-        return "https://docs.easynodes.net/privacy-policy";
-      }
-    },
   },
   methods: {
     nav_active: function () {

@@ -74,6 +74,7 @@ export default new VueI18n({
                 support: 'Support',
                 staking: 'Staking',
                 privacy: 'Privacy',
+                privacyLink: 'https://docs.easynodes.net/privacy-policy',
             },
         },
         'ZH': {
@@ -121,25 +122,26 @@ export default new VueI18n({
                 title: 'Easynodes特点',
                 safety: {
                     title: '安全',
-                    content: '去中心化，虚拟资产在自己的钱包中',
+                    content: '去中心化托管，虚拟资产在自己的钱包里，自己掌握私钥，您的资产更安全。',
                 },
                 convenient: {
                     title: '便捷',
-                    content: '更少的操作流程，更容易加入',
+                    content: '忘掉繁琐的节点维护吧，用更少的操作，享受更简化的方案，查看更直观的收益。',
                 },
                 profession: {
                     title: '专业',
-                    content: '具有多年节点运维经验',
+                    content: '具有十年以上公链开发经验和VPS维护经验的团队，为您提供全方位专业的支持。',
                 },
                 preferential: {
                     title: 'Preferential',
-                    content: '优惠的价格，超高的性价比，最大化的收益',
+                    content: '规模化管理带来成本的降低，我们提供优惠的价格，超高的性价比，最大化您的收益。',
                 },
             },
             footer: {
                 support: '服务支持',
                 staking: 'Staking',
                 privacy: '隐私协议',
+                privacyLink: 'https://docs-zh.easynodes.net/privacy-policy',
             },
         }
     }
