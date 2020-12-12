@@ -1,4 +1,4 @@
-# vue-bulma
+# website
 
 ## Project setup
 ```
