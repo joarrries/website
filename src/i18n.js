@@ -35,8 +35,9 @@ export default new VueI18n({
                 prv: {
                     title: 'PRV',
                     content: 'Conveniently run PRV virtual nodes and obtain stable income. The estimated annualized income is 20%.',
-                    price0: '$9',
-                    price1: 'monthly',
+                    price0: '$2',
+                    price1: 'weekly',
+                    submitUrl: 'https://docs.easynodes.net/running/prv-guide',
                 },
                 xym: {
                     title: 'XYM',
@@ -102,8 +103,9 @@ export default new VueI18n({
                 prv: {
                     title: 'PRV',
                     content: '便捷运行PRV虚拟节点，稳定获得收益，预计年化收益20%',
-                    price0: '$9',
-                    price1: '月',
+                    price0: '$2',
+                    price1: '周',
+                    submitUrl: 'https://docs.easynodes.net/zh/running/prv-guide',
                 },
                 xym: {
                     title: 'XYM',
@@ -141,7 +143,7 @@ export default new VueI18n({
                 support: '服务支持',
                 staking: 'Staking',
                 privacy: '隐私协议',
-                privacyLink: 'https://docs-zh.easynodes.net/privacy-policy',
+                privacyLink: 'https://docs.easynodes.net/zh/privacy-policy',
             },
         }
     }

@@ -55,7 +55,7 @@
 
               <a
                 class="button is-primary"
-                href="https://zfrmz.com/xzzorxmdNLpd82oJkA2j"
+                :href="$t('staking.prv.submitUrl')"
                 target="_blank"
               >
                 {{ $t("staking.runningBtn") }}
