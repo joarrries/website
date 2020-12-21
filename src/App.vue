@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <a class="hidden-item" name="nav"></a>
     <div class="container column is-three-fifths is-narrow-desktop">
       <nav class="navbar" role="navigation" aria-label="main navigation">
