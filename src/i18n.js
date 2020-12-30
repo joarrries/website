@@ -44,6 +44,7 @@ export default new VueI18n({
                     content: 'Symbol will be launched in January next year. We support running Symbol super nodes in a managed way.',
                     price0: '$50',
                     price1: 'monthly',
+                    submitUrl: 'https://docs.easynodes.net/running/xym',
                 },
                 zen: {
                     title: 'ZEN',
@@ -112,6 +113,7 @@ export default new VueI18n({
                     content: 'Symbol即将在明年1月启动，我们支持托管的方式运行Symbol超级节点',
                     price0: '$50',
                     price1: '月',
+                    submitUrl: 'https://docs.easynodes.net/v/zh/running/xym',
                 },
                 zen: {
                     title: 'ZEN',
